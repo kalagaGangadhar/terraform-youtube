@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "instance-1" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t2.micro"
-  vpc_security_group_ids = aws_default_security_group.SG-1.id
+  vpc_security_group_ids = aws_default_security_group.default.id
   tags = {
     Name="one"
   }
@@ -13,7 +13,7 @@ resource "aws_instance" "instance-1" {
 
 }
 
-resource "aws_default_security_group" "SG-1" {
+resource "aws_default_security_group" "default" {
   vpc_id = aws_vpc.vpc-1.id
 }
 
