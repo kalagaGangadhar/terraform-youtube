@@ -15,6 +15,9 @@ resource "aws_instance" "instance-1" {
 
 resource "aws_default_security_group" "SG-1" {
   vpc_id = aws_vpc.vpc-1.id
+  tags = {
+    Name="${var.SG_name}"
+  }
 }
 
 resource "aws_vpc" "vpc-1" {

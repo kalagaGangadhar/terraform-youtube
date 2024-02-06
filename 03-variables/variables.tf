@@ -18,6 +18,11 @@ variable "instance_name" {
   description="used for instance_name input"
 }
 
+variable "SG_name" {
+  type=string
+  description = "used for SG_name input"
+}
+
 variable "vpc_cidr_block" {
   type=string
   description="used for vpc_cidr_block input"
