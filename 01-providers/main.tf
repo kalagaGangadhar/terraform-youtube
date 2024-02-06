@@ -4,9 +4,10 @@ provider "aws" {
 }
 
 # Create a VPC
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16"
+resource "aws_instance" "example" {
   tags = {
     Name = "main"
   }
+  ami           = "ami-03265a0778a880afb"
+  instance_type = "t2.small"
 }
