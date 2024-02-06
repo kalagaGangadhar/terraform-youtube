@@ -9,5 +9,5 @@ resource "aws_instance" "example" {
     Name = "main"
   }
   ami           = "ami-03265a0778a880afb"
-  instance_type = "t2.small"
+  instance_type = "t2.micro"
 }
