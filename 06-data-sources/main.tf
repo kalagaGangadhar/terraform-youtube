@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-data "aws_default_security_group" "SG" {
+data "aws_security_group" "SG" {
   Name= "all"
 }
 
@@ -12,5 +12,5 @@ resource "aws_instance" "exam" {
   tags = {
     Name= "data"
   }
-  vpc_security_group_ids = [ data.aws_default_security_group.SG.id ]
+  vpc_security_group_ids = [ data.aws_security_group.SG.id ]
 }
