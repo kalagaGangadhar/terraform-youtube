@@ -22,3 +22,6 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = [ "sg-08db871bebc41e267" ]
 }
 
+resource "aws_s3_bucket" "s3_bucket" {
+  bucket = "my-groboshop-bucket-1"
+}
