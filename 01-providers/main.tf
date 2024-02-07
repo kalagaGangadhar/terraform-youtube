@@ -1,4 +1,3 @@
-# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
 }
@@ -14,7 +13,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "my-tf-test-bucket"
+  bucket = "my-tf-test-bucket_ganga"
   tags = {
     Name        = "My_ganga_bucket"
   }
