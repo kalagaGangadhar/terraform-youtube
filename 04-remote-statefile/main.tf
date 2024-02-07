@@ -2,6 +2,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
+resource "aws_s3_bucket" "s3_bucket" {
+  bucket = "my-groboshop-bucket"
+}
+
 terraform {
   backend "s3" {
     bucket         = "my-groboshop-bucket"
@@ -20,6 +25,3 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = [ "sg-08db871bebc41e267" ]
 }
 
-resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "my-groboshop-bucket"
-}
