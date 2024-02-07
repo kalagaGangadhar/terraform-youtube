@@ -6,7 +6,7 @@ terraform {
   backend "s3" {
     bucket         = "my-groboshop-bucket"
     key            = "04-remote-statefile/terraform.tfstate"
-#    region         = "us-east-1"
+    region         = "us-east-1"
   }
 }
 
