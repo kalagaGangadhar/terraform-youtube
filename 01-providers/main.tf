@@ -13,8 +13,5 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "my-tf-test-bucket_ganga"
-  tags = {
-    Name        = "My_ganga_bucket"
-  }
+  bucket = "my-groboshop-bucket"
 }
