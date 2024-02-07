@@ -3,7 +3,9 @@ provider "aws" {
 }
 
 data "aws_security_group" "SG" {
-  Name= "all"
+  tags = {
+    Name= "all"
+  }
 }
 
 resource "aws_instance" "exam" {
