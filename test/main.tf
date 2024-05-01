@@ -1,12 +1,21 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
 provider "aws" {
   region = "us-east-1"
 }
+
 
 resource "aws_instance" "instance" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t2.micro"
   tags = {
-    Name="test"
+    Name = "test"
   }
   vpc_security_group_ids = [ "sg-08db871bebc41e267" ]
 }
